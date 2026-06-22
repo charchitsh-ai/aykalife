@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
@@ -20,7 +21,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center w-full px-6 max-w-container-max mx-auto h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <img src="/logo.jpg" alt="AYKA LIFE" className="h-12 w-auto object-contain mix-blend-multiply" />
+          <Image src="/logo.jpg" alt="AYKA LIFE" width={120} height={48} className="h-12 w-auto object-contain mix-blend-multiply" />
         </Link>
 
         {/* Desktop Nav */}

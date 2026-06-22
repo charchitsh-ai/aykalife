@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="max-w-container-max mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="col-span-1 md:col-span-1">
           <Link href="/" className="inline-block mb-6 bg-white rounded-lg p-2">
-            <img src="/logo.jpg" alt="AYKA LIFE" className="h-10 w-auto object-contain" />
+            <Image src="/logo.jpg" alt="AYKA LIFE" width={100} height={40} className="h-10 w-auto object-contain" />
           </Link>
           <p className="text-base text-on-primary/70 mb-6 leading-relaxed">
             Building a connected healthcare ecosystem for Bharat. Expert care made accessible.
