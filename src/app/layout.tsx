@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import AnimationObserver from '@/components/AnimationObserver'
+import WhatsAppFAB from '@/components/WhatsAppFAB'
+
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Ayka Alliance | Healthcare Franchise Excellence',
@@ -23,7 +27,22 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-EMDR91N9DM" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-EMDR91N9DM');
+          `}
+        </Script>
+        
+        <AnimationObserver />
+        {children}
+        <WhatsAppFAB />
+      </body>
     </html>
   )
 }

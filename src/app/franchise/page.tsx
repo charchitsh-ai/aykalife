@@ -40,15 +40,15 @@ export default function FranchisePage() {
       {/* Hero */}
       <section className="relative py-20 overflow-hidden bg-background">
         <div className="max-w-container-max mx-auto px-6 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-bold text-sm mb-6">
+          <div className="hero-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-bold text-sm mb-6 float-anim">
             <span className="material-symbols-outlined text-lg">verified</span>
             India&apos;s Fastest-Growing Network
           </div>
-          <h1 className="text-5xl lg:text-6xl font-bold text-primary max-w-4xl mx-auto mb-6 leading-tight tracking-tight">
+          <h1 className="hero-h1 text-4xl md:text-5xl lg:text-6xl font-bold text-primary max-w-4xl mx-auto mb-6 leading-tight tracking-tight">
             Choose your territory.{' '}
             <span className="text-secondary">Choose your scale.</span>
           </h1>
-          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+          <p className="hero-sub text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
             Three models designed for different levels of commitment and growth ambition — all with exclusive territorial rights and high-recurring revenue potential.
           </p>
         </div>
@@ -57,9 +57,9 @@ export default function FranchisePage() {
       {/* Franchise Models Grid */}
       <section className="py-20 bg-surface-muted">
         <div className="max-w-container-max mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          <div className="stagger-container grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
             {/* City */}
-            <div className="bg-white p-8 rounded-xl card-shadow border border-outline-variant flex flex-col hover:-translate-y-2 transition-all hover:border-primary">
+            <div className="stagger-child hover-lift bg-white p-8 rounded-xl card-shadow border border-outline-variant flex flex-col hover:border-primary transition-all">
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <span className="font-bold text-sm text-on-surface-variant uppercase tracking-widest">City Level</span>
@@ -86,13 +86,13 @@ export default function FranchisePage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/apply?model=City+Flagship" className="w-full py-4 px-6 border-2 border-primary text-primary font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-primary hover:text-on-primary transition-all text-center block">
+              <Link href="/apply?model=City+Flagship" className="w-full py-4 px-6 border-2 border-primary text-primary font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-primary hover:text-on-primary transition-all text-center block btn-hover">
                 Claim City Territory
               </Link>
             </div>
 
             {/* District — Featured */}
-            <div className="bg-white p-8 rounded-xl card-shadow border-2 border-primary flex flex-col relative overflow-hidden hover:-translate-y-2 transition-all">
+            <div className="stagger-child hover-lift bg-white p-8 rounded-xl card-shadow border-2 border-primary flex flex-col relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-primary text-on-primary px-6 py-2 rounded-bl-xl font-bold text-sm">
                 MOST POPULAR
               </div>
@@ -122,13 +122,13 @@ export default function FranchisePage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/apply?model=District+Franchise" className="w-full py-4 px-6 bg-primary text-on-primary font-bold text-sm uppercase tracking-wider rounded-lg hover:shadow-lg transition-all text-center block">
+              <Link href="/apply?model=District+Franchise" className="w-full py-4 px-6 bg-primary text-on-primary font-bold text-sm uppercase tracking-wider rounded-lg hover:shadow-lg transition-all text-center block btn-hover pulse-cta">
                 Claim District Territory
               </Link>
             </div>
 
             {/* State */}
-            <div className="bg-white p-8 rounded-xl card-shadow border border-outline-variant flex flex-col hover:-translate-y-2 transition-all hover:border-primary">
+            <div className="stagger-child hover-lift bg-white p-8 rounded-xl card-shadow border border-outline-variant flex flex-col hover:border-primary transition-all">
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <span className="font-bold text-sm text-on-surface-variant uppercase tracking-widest">State Level</span>
@@ -155,7 +155,7 @@ export default function FranchisePage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/apply?model=State+Franchise" className="w-full py-4 px-6 border-2 border-primary text-primary font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-primary hover:text-on-primary transition-all text-center block">
+              <Link href="/apply?model=State+Franchise" className="w-full py-4 px-6 border-2 border-primary text-primary font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-primary hover:text-on-primary transition-all text-center block btn-hover">
                 Claim State Territory
               </Link>
             </div>
@@ -167,26 +167,26 @@ export default function FranchisePage() {
       <section className="py-20 bg-white">
         <div className="max-w-container-max mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Multiple income streams. One business.</h2>
-            <p className="text-lg text-on-surface-variant">Unlike traditional franchises, AYKA generates recurring revenue across 6 categories.</p>
+            <h2 className="anim anim-up text-4xl font-bold text-primary mb-4">Multiple income streams. One business.</h2>
+            <p className="anim anim-up d1 text-lg text-on-surface-variant">Unlike traditional franchises, AYKA generates recurring revenue across 6 categories.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
-            <div className="md:col-span-2 bg-surface-container p-8 rounded-xl">
+          <div className="stagger-container grid grid-cols-1 md:grid-cols-6 gap-6">
+            <div className="stagger-child hover-lift md:col-span-2 bg-surface-container p-8 rounded-xl">
               <span className="material-symbols-outlined text-primary mb-4 block">analytics</span>
               <h4 className="text-xl font-bold text-primary mb-2">Clinic SaaS</h4>
               <p className="text-base leading-relaxed">Monthly software fees from partner clinics in your territory.</p>
             </div>
-            <div className="md:col-span-2 bg-surface-container p-8 rounded-xl">
+            <div className="stagger-child hover-lift md:col-span-2 bg-surface-container p-8 rounded-xl">
               <span className="material-symbols-outlined text-primary mb-4 block">person_add</span>
               <h4 className="text-xl font-bold text-primary mb-2">Doctor Network</h4>
               <p className="text-base leading-relaxed">Revenue from doctors registered and active on the platform.</p>
             </div>
-            <div className="md:col-span-2 bg-surface-container p-8 rounded-xl">
+            <div className="stagger-child hover-lift md:col-span-2 bg-surface-container p-8 rounded-xl">
               <span className="material-symbols-outlined text-primary mb-4 block">videocam</span>
               <h4 className="text-xl font-bold text-primary mb-2">Telemedicine</h4>
               <p className="text-base leading-relaxed">Commissions from online consultations and remote healthcare.</p>
             </div>
-            <div className="md:col-span-3 bg-secondary-container p-10 rounded-xl flex items-center gap-8">
+            <div className="stagger-child hover-lift md:col-span-3 bg-secondary-container p-10 rounded-xl flex items-center gap-8">
               <div className="p-5 rounded-full bg-on-secondary-container/10 shrink-0">
                 <span className="material-symbols-outlined text-on-secondary-container" style={{ fontSize: 40 }}>refresh</span>
               </div>
@@ -195,7 +195,7 @@ export default function FranchisePage() {
                 <p className="text-base text-on-secondary-container/80 leading-relaxed">Every new doctor or clinic increases the long-term asset value of your territory.</p>
               </div>
             </div>
-            <div className="md:col-span-3 bg-primary text-on-primary p-10 rounded-xl flex items-center gap-8">
+            <div className="stagger-child hover-lift md:col-span-3 bg-primary text-on-primary p-10 rounded-xl flex items-center gap-8">
               <div className="p-5 rounded-full bg-white/10 shrink-0">
                 <span className="material-symbols-outlined text-white" style={{ fontSize: 40 }}>shield</span>
               </div>
@@ -212,12 +212,12 @@ export default function FranchisePage() {
       <section className="py-20 bg-surface-muted">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Common questions, direct answers.</h2>
-            <p className="text-lg text-on-surface-variant">Everything you need to know about starting your healthcare journey.</p>
+            <h2 className="anim anim-up text-4xl font-bold text-primary mb-4">Common questions, direct answers.</h2>
+            <p className="anim anim-up d1 text-lg text-on-surface-variant">Everything you need to know about starting your healthcare journey.</p>
           </div>
-          <div className="space-y-4">
+          <div className="stagger-container space-y-4">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group bg-white rounded-lg border border-outline-variant overflow-hidden">
+              <details key={faq.q} className="stagger-child group bg-white rounded-lg border border-outline-variant overflow-hidden hover:border-primary/40 transition-all">
                 <summary className="w-full px-6 py-5 text-left flex justify-between items-center cursor-pointer list-none font-bold text-primary">
                   {faq.q}
                   <span className="material-symbols-outlined text-primary transition-transform group-open:rotate-180 shrink-0">expand_more</span>
@@ -235,29 +235,30 @@ export default function FranchisePage() {
       <section className="py-20 bg-primary overflow-hidden relative">
         <div className="max-w-container-max mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-5xl font-bold text-white mb-6 leading-tight">Secure your territory before someone else does.</h2>
+            <div className="anim anim-left">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Secure your territory before someone else does.</h2>
               <p className="text-lg text-white/80 mb-8 max-w-lg leading-relaxed">
                 Franchise rights are allocated on a first-come, first-served basis. Our team will contact you within 24–48 hours of your enquiry.
               </p>
               <div className="space-y-4">
-                <div className="flex items-center gap-4 text-white">
+                <a href="tel:+919211825264" className="flex items-center gap-4 text-white hover:text-secondary-fixed transition-colors btn-hover">
                   <span className="material-symbols-outlined">call</span>
                   <span className="font-bold">+91 92118 25264</span>
-                </div>
-                <div className="flex items-center gap-4 text-white">
+                </a>
+                <a href="mailto:alliance@aykacare.in" className="flex items-center gap-4 text-white hover:text-secondary-fixed transition-colors btn-hover">
                   <span className="material-symbols-outlined">mail</span>
                   <span className="font-bold">alliance@aykacare.in</span>
-                </div>
+                </a>
               </div>
             </div>
-            <DarkEnquiryForm />
+            <div className="anim anim-right d2">
+              <DarkEnquiryForm />
+            </div>
           </div>
         </div>
       </section>
 
       <Footer />
-      <WhatsAppFAB />
     </>
   )
 }

@@ -17,75 +17,38 @@ export default function TechnologyPage() {
       <section className="relative pt-20 pb-20 overflow-hidden bg-background">
         <div className="relative z-10 max-w-container-max mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-bold text-sm mb-6 uppercase tracking-wider">
+            <span className="hero-badge inline-block bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full font-bold text-sm mb-6 uppercase tracking-wider float-anim">
               Scalable Ecosystem
             </span>
-            <h1 className="text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight tracking-tight">
+            <h1 className="hero-h1 text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight tracking-tight">
               Technology built{' '}
               <br />
               <em className="italic text-primary-container">for scale.</em>
             </h1>
-            <p className="text-lg text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+            <p className="hero-sub text-lg text-on-surface-variant mb-10 max-w-xl leading-relaxed">
               Access the full AYKA digital ecosystem from day one. Our unified SaaS platform empowers partners to manage patient lifecycles, doctor operations, and marketing growth with medical precision.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/apply" className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wider shadow-lg hover:shadow-xl transition-all">
+            <div className="hero-btns flex flex-col sm:flex-row flex-wrap gap-4">
+              <Link href="/apply" className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wider shadow-lg hover:shadow-xl transition-all btn-hover pulse-cta w-full sm:w-auto text-center">
                 Explore Platform
               </Link>
-              <a href="tel:+919211825264" className="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wider hover:bg-secondary-fixed-dim transition-colors">
+              <a href="tel:+919211825264" className="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wider hover:bg-secondary-fixed-dim transition-colors btn-hover w-full sm:w-auto text-center">
                 Talk to Support
               </a>
             </div>
           </div>
 
-          {/* Dashboard Mockup */}
-          <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-4 border border-outline-variant/30 transform lg:rotate-2 hover:rotate-0 transition-transform duration-700">
-              <div className="bg-surface-container rounded-lg p-6 h-[480px] overflow-hidden">
-                <div className="flex items-center justify-between mb-8">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-error/40"></div>
-                    <div className="w-3 h-3 rounded-full bg-amber-accent/40"></div>
-                    <div className="w-3 h-3 rounded-full bg-primary/40"></div>
-                  </div>
-                  <div className="h-4 w-32 bg-outline-variant/20 rounded"></div>
-                </div>
-                <div className="grid grid-cols-3 gap-4 mb-8">
-                  {[
-                    { icon: 'groups', color: 'bg-primary/10', iconColor: 'text-primary', barColor: 'bg-primary/20' },
-                    { icon: 'trending_up', color: 'bg-amber-accent/10', iconColor: 'text-amber-accent', barColor: 'bg-amber-accent/20' },
-                    { icon: 'calendar_today', color: 'bg-secondary/10', iconColor: 'text-secondary', barColor: 'bg-secondary/20' },
-                  ].map((item, i) => (
-                    <div key={i} className="h-24 bg-white rounded-xl shadow-sm p-4 flex flex-col justify-end">
-                      <div className={`w-8 h-8 rounded-lg ${item.color} flex items-center justify-center mb-2`}>
-                        <span className={`material-symbols-outlined ${item.iconColor} text-sm`}>{item.icon}</span>
-                      </div>
-                      <div className="h-2 w-12 bg-outline-variant/30 rounded mb-1"></div>
-                      <div className={`h-4 w-16 ${item.barColor} rounded`}></div>
-                    </div>
-                  ))}
-                </div>
-                <div className="h-64 bg-white rounded-xl shadow-sm p-4">
-                  <div className="flex justify-between items-center mb-4">
-                    <div className="h-4 w-24 bg-outline-variant/40 rounded"></div>
-                    <div className="h-4 w-16 bg-outline-variant/20 rounded"></div>
-                  </div>
-                  <div className="space-y-4">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-full bg-surface-container"></div>
-                        <div className="flex-1 space-y-2">
-                          <div className="h-3 w-3/4 bg-outline-variant/20 rounded"></div>
-                          <div className="h-2 w-1/2 bg-outline-variant/10 rounded"></div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+          {/* Real App Screenshot */}
+          <div className="hero-visual relative">
+            <div className="transform lg:rotate-2 hover:rotate-0 transition-transform duration-700 float-anim-slow">
+              <img
+                src="/ayka-app-mockup.png"
+                alt="AYKA Care App — Multi-device telemedicine platform"
+                className="w-full h-auto rounded-2xl drop-shadow-2xl"
+              />
             </div>
             {/* Stats Card */}
-            <div className="absolute -bottom-10 -left-10 bg-primary-container text-on-primary-container p-6 rounded-2xl shadow-xl hidden md:block">
+            <div className="absolute -bottom-6 -left-6 bg-primary-container text-on-primary-container p-6 rounded-2xl shadow-xl hidden md:block anim anim-scale">
               <div className="text-4xl font-bold mb-1">30k+</div>
               <div className="font-bold text-sm text-on-primary-container/80 uppercase tracking-wider">Patient Reach</div>
             </div>
@@ -97,18 +60,18 @@ export default function TechnologyPage() {
       <section className="py-20 bg-surface-container-low">
         <div className="max-w-container-max mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">AYKA Expert SaaS Platform</h2>
-            <p className="text-base text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+            <h2 className="anim anim-up text-4xl font-bold text-primary mb-4">AYKA Expert SaaS Platform</h2>
+            <p className="anim anim-up d1 text-base text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
               A proprietary operational hub designed for clinic efficiency and medical excellence.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div className="stagger-container grid grid-cols-1 md:grid-cols-12 gap-6">
             {/* CRM — Featured, wide */}
-            <div className="md:col-span-8 bg-white rounded-3xl p-8 shadow-card border border-outline-variant/20 relative overflow-hidden group">
+            <div className="stagger-child hover-lift md:col-span-8 bg-white rounded-3xl p-8 shadow-card border border-outline-variant/20 relative overflow-hidden group">
               <div className="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6">
                 <span className="material-symbols-outlined text-primary text-3xl">hub</span>
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">CRM & Lead Management</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">CRM &amp; Lead Management</h3>
               <p className="text-base text-on-surface-variant mb-8 max-w-md leading-relaxed">
                 Full pipeline visibility, doctor onboarding tracking, and patient acquisition tools. Manage your territory&apos;s growth with data-driven insights.
               </p>
@@ -123,7 +86,7 @@ export default function TechnologyPage() {
             </div>
 
             {/* Doctor Portal */}
-            <div className="md:col-span-4 bg-primary text-on-primary rounded-3xl p-8 shadow-2xl">
+            <div className="stagger-child hover-lift md:col-span-4 bg-primary text-on-primary rounded-3xl p-8 shadow-2xl">
               <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
                 <span className="material-symbols-outlined text-on-primary text-3xl">person_add</span>
               </div>
@@ -134,7 +97,7 @@ export default function TechnologyPage() {
             </div>
 
             {/* Analytics */}
-            <div className="md:col-span-4 bg-secondary-fixed text-on-secondary-fixed rounded-3xl p-8 shadow-card border border-secondary/10">
+            <div className="stagger-child hover-lift md:col-span-4 bg-secondary-fixed text-on-secondary-fixed rounded-3xl p-8 shadow-card border border-secondary/10">
               <div className="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mb-6">
                 <span className="material-symbols-outlined text-on-secondary-fixed text-3xl">insights</span>
               </div>
@@ -145,7 +108,7 @@ export default function TechnologyPage() {
             </div>
 
             {/* Patient Care */}
-            <div className="md:col-span-4 bg-white rounded-3xl p-8 shadow-card border border-outline-variant/20">
+            <div className="stagger-child hover-lift md:col-span-4 bg-white rounded-3xl p-8 shadow-card border border-outline-variant/20">
               <div className="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6">
                 <span className="material-symbols-outlined text-primary text-3xl">clinical_notes</span>
               </div>
@@ -156,7 +119,7 @@ export default function TechnologyPage() {
             </div>
 
             {/* Marketing Toolkit */}
-            <div className="md:col-span-4 bg-white rounded-3xl p-8 shadow-card border border-outline-variant/20 flex flex-col justify-between">
+            <div className="stagger-child hover-lift md:col-span-4 bg-white rounded-3xl p-8 shadow-card border border-outline-variant/20 flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6">
                   <span className="material-symbols-outlined text-primary text-3xl">campaign</span>
@@ -185,23 +148,23 @@ export default function TechnologyPage() {
         <div className="max-w-container-max mx-auto px-6">
           <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
             <div className="max-w-xl">
-              <h2 className="text-4xl font-bold text-primary mb-4">A unified digital layer.</h2>
-              <p className="text-lg text-on-surface-variant leading-relaxed">
+              <h2 className="anim anim-left text-4xl font-bold text-primary mb-4">A unified digital layer.</h2>
+              <p className="anim anim-left d1 text-lg text-on-surface-variant leading-relaxed">
                 One platform, infinite possibilities. Every tool you need to run your healthcare franchise successfully.
               </p>
             </div>
-            <div className="flex gap-4">
-              <div className="flex flex-col items-center p-4 bg-surface-container rounded-2xl min-w-[120px]">
+            <div className="anim anim-right flex gap-4">
+              <div className="flex flex-col items-center p-4 bg-surface-container rounded-2xl min-w-[120px] hover-lift">
                 <span className="text-4xl font-bold text-primary">06+</span>
                 <span className="font-bold text-sm text-on-surface-variant mt-1">Tools</span>
               </div>
-              <div className="flex flex-col items-center p-4 bg-primary text-on-primary rounded-2xl min-w-[120px]">
+              <div className="flex flex-col items-center p-4 bg-primary text-on-primary rounded-2xl min-w-[120px] hover-lift">
                 <span className="text-4xl font-bold">24/7</span>
                 <span className="font-bold text-sm opacity-80 mt-1">Support</span>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="stagger-container grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 num: '01',
@@ -219,7 +182,7 @@ export default function TechnologyPage() {
                 desc: 'Automated daily, weekly, and monthly operational reports for audit and compliance.',
               },
             ].map((f) => (
-              <div key={f.num} className="p-8 rounded-2xl border border-outline-variant/30 hover:border-primary/30 hover:shadow-card transition-all group">
+              <div key={f.num} className="stagger-child hover-lift p-8 rounded-2xl border border-outline-variant/30 hover:border-primary/30 transition-all group">
                 <span className="font-bold text-sm text-primary/40 block mb-4">{f.num}</span>
                 <h4 className="text-xl font-bold text-primary mb-3">{f.title}</h4>
                 <p className="text-base text-on-surface-variant mb-6 leading-relaxed">{f.desc}</p>
@@ -234,10 +197,10 @@ export default function TechnologyPage() {
       <section className="py-20 bg-surface-muted">
         <div className="max-w-container-max mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Trusted by franchise partners.</h2>
-            <p className="text-base text-on-surface-variant">Hear from the entrepreneurs leading the alliance across India.</p>
+            <h2 className="anim anim-up text-4xl font-bold text-primary mb-4">Trusted by franchise partners.</h2>
+            <p className="anim anim-up d1 text-base text-on-surface-variant">Hear from the entrepreneurs leading the alliance across India.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+          <div className="stagger-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
             {[
               {
                 quote: "Becoming an AYKA Care franchise partner has been one of the best decisions for my career and community. The team's guidance in setup, marketing, and daily operations made the journey seamless.",
@@ -269,7 +232,7 @@ export default function TechnologyPage() {
             ].map((t) => (
               <div
                 key={t.name}
-                className={`bg-white p-8 rounded-3xl shadow-card flex flex-col justify-between border relative ${
+                className={`stagger-child hover-lift bg-white p-8 rounded-3xl shadow-card flex flex-col justify-between border relative ${
                   t.featured ? 'border-primary/20 scale-105 z-10' : 'border-outline-variant/10'
                 }`}
               >
@@ -296,29 +259,27 @@ export default function TechnologyPage() {
 
       {/* CTA */}
       <section className="py-20 px-6">
-        <div className="max-w-container-max mx-auto bg-primary rounded-[48px] p-12 md:p-20 text-center relative overflow-hidden">
+        <div className="anim anim-scale max-w-container-max mx-auto bg-primary rounded-[48px] p-12 md:p-20 text-center relative overflow-hidden">
           <div className="relative z-10">
-            <h2 className="text-4xl font-bold text-on-primary mb-6">Ready to scale your territory?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-on-primary mb-8 leading-tight">
+              Ready to scale your territory?
+            </h2>
             <p className="text-lg text-on-primary-container mb-10 max-w-2xl mx-auto leading-relaxed">
               Secure your exclusive rights today and leverage India&apos;s fastest-growing medical technology ecosystem.
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-4">
               <Link
                 href="/apply"
-                className="bg-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-2xl font-bold text-sm uppercase tracking-wider hover:scale-105 transition-transform shadow-lg"
+                className="bg-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-2xl font-bold text-sm uppercase tracking-wider hover:scale-105 transition-transform shadow-lg btn-hover pulse-cta w-full md:w-auto text-center"
               >
                 Claim My Territory Now
               </Link>
-              <button className="bg-white/10 text-on-primary border border-white/20 px-10 py-5 rounded-2xl font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-colors">
-                Request Demo
-              </button>
             </div>
           </div>
         </div>
       </section>
 
       <Footer />
-      <WhatsAppFAB />
     </>
   )
 }
