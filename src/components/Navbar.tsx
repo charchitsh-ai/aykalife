@@ -54,7 +54,7 @@ export default function Navbar() {
           </a>
           <Link
             href="/apply"
-            className="bg-primary text-on-primary px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-primary-container transition-colors"
+            className="hidden sm:inline-flex bg-primary text-on-primary px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-primary-container transition-colors"
           >
             Claim Territory
           </Link>
@@ -73,7 +73,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-surface border-t border-outline-variant/30 px-6 py-4 space-y-4">
+        <div className="md:hidden bg-surface border-t border-outline-variant/30 px-6 py-6 space-y-4">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -84,6 +84,13 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/apply"
+            className="block w-full bg-primary text-on-primary px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider text-center hover:bg-primary-container transition-colors mt-4"
+            onClick={() => setMobileOpen(false)}
+          >
+            Claim Territory
+          </Link>
         </div>
       )}
     </nav>

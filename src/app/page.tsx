@@ -10,20 +10,18 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-20 overflow-hidden bg-background">
+      <section className="relative pt-12 pb-16 md:pt-20 md:pb-20 overflow-hidden bg-background">
         <div className="max-w-container-max mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div className="z-10">
             <div className="hero-badge inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full mb-6 float-anim">
               <span className="material-symbols-outlined text-sm">trending_up</span>
               <span className="text-sm font-bold tracking-wider">India&apos;s Fastest-Growing Network</span>
             </div>
-            <h1 className="hero-h1 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-primary mb-6">
-              Your Vision +{' '}
-              <br />Our Brand ={' '}
-              <br />
+            <h1 className="hero-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-primary mb-6">
+              Your Vision + <span className="hidden sm:inline"><br /></span>Our Brand = <span className="hidden sm:inline"><br /></span>
               <span className="text-secondary">A Winning Alliance</span>
             </h1>
-            <p className="hero-sub text-lg text-on-surface-variant mb-8 max-w-xl leading-relaxed">
+            <p className="hero-sub text-base sm:text-lg text-on-surface-variant mb-8 max-w-xl leading-relaxed">
               Partner with AYKA Care and lead the future of healthcare excellence. Join 2,500+ experts and 40+ partner clinics in making expert healthcare accessible, available, and affordable.
             </p>
             <div className="hero-btns flex flex-col sm:flex-row flex-wrap gap-4">
@@ -44,7 +42,7 @@ export default function HomePage() {
           </div>
 
           {/* Stats Bento */}
-          <div className="hero-visual relative">
+          <div className="hero-visual relative mt-8 lg:mt-0">
             <div className="grid grid-cols-2 gap-4">
               {[
                 { icon: 'groups', stat: '2,500+', label: 'Verified Experts', delay: '' },
@@ -54,13 +52,13 @@ export default function HomePage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className={`bg-surface-container-lowest p-8 rounded-xl card-shadow border border-outline-variant/30 hover-lift ${item.offset ? 'mt-8' : ''}`}
+                  className={`bg-surface-container-lowest p-4 sm:p-8 rounded-xl card-shadow border border-outline-variant/30 hover-lift ${item.offset ? 'mt-4 sm:mt-8' : ''}`}
                 >
-                  <span className="material-symbols-outlined text-primary mb-4 block" style={{ fontSize: 32 }}>
+                  <span className="material-symbols-outlined text-primary mb-4 block" style={{ fontSize: 28 }}>
                     {item.icon}
                   </span>
-                  <div className="text-4xl font-bold tracking-tight text-primary">{item.stat}</div>
-                  <div className="text-sm font-bold uppercase tracking-wider text-on-surface-variant mt-1">{item.label}</div>
+                  <div className="text-2xl sm:text-4xl font-bold tracking-tight text-primary">{item.stat}</div>
+                  <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-on-surface-variant mt-1 leading-snug">{item.label}</div>
                 </div>
               ))}
             </div>
@@ -78,9 +76,9 @@ export default function HomePage() {
               Three models designed for different levels of commitment and growth ambition — all with exclusive territorial rights.
             </p>
           </div>
-          <div className="stagger-container grid md:grid-cols-3 gap-6 items-start">
+          <div className="stagger-container grid md:grid-cols-3 gap-8 items-start">
             {/* City */}
-            <div className="stagger-child hover-lift bg-white p-8 rounded-xl card-shadow flex flex-col h-full border border-outline-variant/20 hover:border-primary transition-all">
+            <div className="stagger-child hover-lift bg-white p-6 sm:p-8 rounded-xl card-shadow flex flex-col h-full border border-outline-variant/20 hover:border-primary transition-all">
               <div className="mb-6">
                 <span className="text-on-surface-variant font-bold text-sm">City Level</span>
                 <h3 className="text-2xl font-bold text-primary mt-2">City Flagship</h3>
@@ -103,7 +101,7 @@ export default function HomePage() {
             </div>
 
             {/* District — Featured */}
-            <div className="stagger-child hover-lift bg-primary text-on-primary p-8 rounded-xl shadow-2xl flex flex-col h-full relative overflow-hidden transform scale-105 z-10">
+            <div className="stagger-child hover-lift bg-primary text-on-primary p-6 sm:p-8 rounded-xl shadow-2xl flex flex-col h-full relative overflow-hidden transform md:scale-105 z-10 my-4 md:my-0">
               <div className="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                 Most Popular
               </div>
@@ -129,7 +127,7 @@ export default function HomePage() {
             </div>
 
             {/* State */}
-            <div className="stagger-child hover-lift bg-white p-8 rounded-xl card-shadow flex flex-col h-full border border-outline-variant/20 hover:border-primary transition-all">
+            <div className="stagger-child hover-lift bg-white p-6 sm:p-8 rounded-xl card-shadow flex flex-col h-full border border-outline-variant/20 hover:border-primary transition-all">
               <div className="mb-6">
                 <span className="text-on-surface-variant font-bold text-sm">State Level</span>
                 <h3 className="text-2xl font-bold text-primary mt-2">State Franchise</h3>
@@ -324,8 +322,8 @@ export default function HomePage() {
             </div>
 
             {/* Tech Card */}
-            <div className="anim anim-right float-anim-slow bg-primary p-12 rounded-3xl text-on-primary lg:sticky top-28">
-              <div className="mb-12">
+            <div className="anim anim-right float-anim-slow bg-primary p-6 sm:p-12 rounded-3xl text-on-primary lg:sticky top-28 mt-12 lg:mt-0">
+              <div className="mb-8 sm:mb-12">
                 <h3 className="text-3xl font-bold mb-4">
                   Technology<br />built for <em className="italic text-secondary-fixed">scale.</em>
                 </h3>
