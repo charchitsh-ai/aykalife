@@ -18,6 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* Fallback CSS for hosting environments (e.g. Hostinger) where /_next/static/ may not serve correctly */}
+        <link rel="stylesheet" href="/styles.css" />
         <link
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
           rel="stylesheet"
