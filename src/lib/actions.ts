@@ -3,10 +3,12 @@
 import { createClient } from '@supabase/supabase-js'
 import nodemailer from 'nodemailer'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+
+// Initialize Supabase only if keys are present to prevent server crash on startup
+const supabase = supabaseUrl && supabaseAnonKey ? createClient(supabaseUrl, supabaseAnonKey) : null
+
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.hostinger.com',
@@ -30,20 +32,22 @@ export type ApplicationData = {
 }
 
 export async function submitApplication(data: ApplicationData) {
-  // 1. Save to Supabase
-  const { error } = await supabase
-    .from('franchise_applications')
-    .insert([{
-      ...data,
-      submitted_at: new Date().toISOString(),
-      status: 'new',
-    }])
+  // 1. Save to Supabase (if configured)
+  if (supabase) {
+    const { error } = await supabase
+      .from('franchise_applications')
+      .insert([{
+        ...data,
+        submitted_at: new Date().toISOString(),
+        status: 'new',
+      }])
 
-  if (error) {
-    console.error('Supabase error:', error)
-    // If Supabase fails, we still might want to send emails or we can fail early.
-    // Let's fail early to avoid duplicates if they retry.
-    return { success: false, error: error.message }
+    if (error) {
+      console.error('Supabase error:', error)
+      return { success: false, error: error.message }
+    }
+  } else {
+    console.warn('⚠️ Supabase is not configured. Form data will not be saved to database, but emails will still be sent.')
   }
 
   // 2. Send email to customer
